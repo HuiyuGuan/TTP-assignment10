@@ -21,6 +21,22 @@ app.post("/store", async(req, res) => {
 
 })
 
+app.post("/employees", async(req, res) => {
+    try{
+        const {employee_id, store_id, employee_name,  employee_phonenumber, employee_email,employee_roll } = req.body; //request variables
+        const newEmployees = await pool.query(
+            "INSERT INTO employees (employee_id, store_id, employee_name,  employee_phonenumber, employee_email,employee_roll ) VALUES ($1, $2, $3, $4, $5, $6)",
+            [employee_id, store_id, employee_name,  employee_phonenumber, employee_email,employee_roll ] 
+        );
+
+        res.json(newEmployees.rows[0]) // return the first row created
+
+    }catch(err){
+        console.log(err.message)
+    }
+
+}) 
+
  
 
 //Router for get request to get all data from the store table
