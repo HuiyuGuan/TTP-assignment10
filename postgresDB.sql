@@ -61,5 +61,14 @@ Create table customers (
 
 -- stack of inner joins that joins the 5 tables
 
-
+select *
+From store
+inner join employees
+on store.store_id = employees.store_id
+inner join product
+on store.store_id = product.store_id
+inner join purchases
+on store.store_id = purchases.store_id
+inner join customers
+on purchases.purchase_id = customers.purchase_id;
 
