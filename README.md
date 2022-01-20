@@ -1,6 +1,6 @@
 # TTP-assignment10
 <ul>
-  <li>Huiyu Guan, Wong Huang Liu</li>
+  <li>Huiyu Guan</li>
   <li>Wong Huang Liu</li>  
   <li>Hyeran Park</li>
 </ul>
