@@ -21,6 +21,8 @@ app.post("/store", async(req, res) => {
 
 })
 
+ 
+
 //Router for get request to get all data from the store table
 app.get("/store", async(req, res) => {
     try{
